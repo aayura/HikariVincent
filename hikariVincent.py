@@ -1,3 +1,4 @@
+from email import message
 import hikari
 import lightbulb
 import random
@@ -13,7 +14,7 @@ async def on_started(event):
 
 @bot.listen(hikari.GuildMessageCreateEvent)
 async def on_message(event):
-  await event.respond(f"{event.author.mention} You typed a message!")
+  await message.respond(f"{message.author.mention} You typed a message!")
 
 @bot.command
 @lightbulb.command('test', 'Testing commands.')
