@@ -14,7 +14,7 @@ async def on_started(event):
 
 @bot.listen(hikari.GuildMessageCreateEvent)
 async def on_message(event):
-  await message.respond(f"{message.author.mention} You typed a message!")
+  await event.message.respond(f"{event.message.author.mention} You typed a message!")
 
 @bot.command
 @lightbulb.command('test', 'Testing commands.')
