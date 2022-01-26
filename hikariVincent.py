@@ -11,7 +11,7 @@ bot = lightbulb.BotApp(token=my_secret, default_enabled_guilds = (73319874034873
 async def on_started(event):
   print("Bot is ready, go get them tiger!")
 
-@bot.listen(hikari.MessageCreateEvent)
+@bot.listen(hikari.GuildMessageCreateEvent)
 async def on_message(event):
   await event.respond(f"{event.author.mention} You typed a message!")
 
