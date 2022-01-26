@@ -5,7 +5,7 @@ import os
 from webserver import keep_alive
 
 my_secret = os.environ['DISCORD_BOT_TOKEN']
-bot = lightbulb.BotApp(token='my_secret', default_enabled_guilds = (733198740348731442))
+bot = lightbulb.BotApp(token=my_secret, default_enabled_guilds = (733198740348731442))
 
 @bot.listen(hikari.StartedEvent)
 async def on_started(event):
